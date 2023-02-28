@@ -1,0 +1,35 @@
+<form method = 'POST'>
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="first_name-field">
+        {{ form.first_name.label }}
+        {{ form.first_name(class = 'form-control', placeholder = "First Name") }}
+        </fieldset>
+        <fieldset id="last_name-field">
+        {{ form.last_name.label }}
+        {{ form.last_name(class = 'form-control', placeholder = "Last Name") }}
+        </fieldset>
+        <fieldset id="current_address-field">
+        {{ form.current_address.label }}
+        {{ form.current_address(class = 'form-control', placeholder = "Current Address") }}
+        </fieldset>
+        <fieldset id="city-field">
+        {{ form.city.label }}
+        {{ form.city(class = 'form-control', placeholder = "City") }}
+        </fieldset>
+        <fieldset id="state-field">
+        {{ form.state.label }}
+        {{ form.state(class = 'form-control', placeholder = "State") }}
+        </fieldset>
+        <fieldset id="zip_code">
+        {{ form.zip_code.label }}
+        {{ form.zip_code(class = 'form-control', placeholder = "Zip Code") }}
+        </fieldset>
+        <fieldset id="phone_number">
+        {{ form.phone_number.label }}
+        {{ form.phone_number(class = 'form-control', placeholder = "Phone Number") }}
+        </fieldset>
+
+        {{ form.submit_button(class = "btn btn-primary btn-block") }}
+    </div>
+</form>

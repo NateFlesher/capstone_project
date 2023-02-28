@@ -1,0 +1,91 @@
+/* Nav Styles */
+.ct-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ct-nav img {
+    width: 25%;
+    max-width: 100%;
+    margin-left: 2vw;
+}
+
+ul#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul#horizontal-list li,
+ul#horizontal-list a {
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+}
+
+ul#horizontal-list a:nth-last-child(1) {
+    border: 2px solid blue;
+    border-radius: 11px;
+    margin-right: 0.2vw;
+}
+
+/* End of navbar styles */
+/* Header section of index.html */
+#header-text {
+    padding: 2vw;
+}
+
+.header-image {
+    width: 82%;
+    max-width: 100%;
+}
+
+/* End of Header Section */
+
+/* Middle Section Styles */
+#middle-text {
+    text-align: center;
+    padding: 13vh;
+}
+
+#middle-text h2 {
+    padding: 1.5vw;
+}
+
+/* End of middle section */
+
+header {
+    background-image: url("../../static/images/MuvingHeaderImage.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+  ul#horizontal-list{
+    min-width: none;
+    list-style: none;
+    padding-top: 20px;
+  }
+
+  /* Start of Footer */
+.footer-text-flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+#footer-logo {
+    width: 100%;
+    max-width: 100%;
+}
+
+#footer {
+    border-top: 3px solid black;
+    margin-top: 20vh;
+}

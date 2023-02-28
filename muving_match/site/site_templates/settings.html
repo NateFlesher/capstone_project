@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Settings</h1>
+<h2>Profile Information</h2>
+<ul>
+    <li>First Name: {{ customer_profile.first_name }}</li>
+    <li>Last Name: {{ customer_profile.last_name }}</li>
+    <li>Current Address: {{ customer_profile.current_address }}</li>
+    <li>City: {{ customer_profile.city }}</li>
+    <li>State: {{ customer_profile.state }}</li>
+    <li>Zip Code: {{ customer_profile.zip_code }}</li>
+    <li>Phone Number: {{ customer_profile.phone_number }}</li>
+</ul>
+
+<a href="{{ url_for('site.edit_profile') }}"><button>Edit Profile Settings</button></a>
+{% endblock %}

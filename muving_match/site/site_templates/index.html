@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'auth-success' %}
+            <div class="container">
+                {{ msg }}
+                <button type="button" class="close" data-dismiss = "alert", onclick="this.parentElement.style.display='none'">$times;</button>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="container">
+<!--Header Section-->
+<header class="row">
+    <div class="co-23 col-md-6" id="header-text">
+        <h2>Find your Muving Match Today!</h2>
+        <h5>Hire the Person, not the Company</h5>
+    </div>
+    <div>
+        <button class="btn btn-primary">Find a Muver</button>
+        <button class="btn btn-primary">Post a Job</button>
+    </div>
+    <!--Header Image-->  
+    <div class="col-23 col-md-6">
+    </div>
+</header>
+<!--End of Header -->
+
+<!-- Middle Section / Body -->
+<section class="row">
+    <div class="col-12" id="middle-text">
+        <h2>Find A Muver That's Right for You!</h2>
+        <p>You can Post a Public bid or Find a Muver of your choosing!</p>
+    </div>
+</section>
+
+<!--Google Map API/ Muver Map-->
+<!--Muver List-->
+<!--Post a Job Form-->
+<!-- End of Middle Section -->
+
+<!--Footer-->
+<footer class="row" id="footer">
+<div class="col-3 col-md-3">
+    <img src="../../static/images/MuvingMatchLogo.png" alt="footer logo" class="footer-logo">
+</div>
+<div class="col-3 col-md-43">
+    <div class="footer-text">
+        <h4>Company</h4>
+        <p>About us</p>
+        <p>Our Offerings</p>
+    </div>
+</div>
+<div class="col-3 col-md-3">
+    <div class="footer-text">
+        <h4>For Customers</h4>
+        <p>Contact Us</p>
+        <p>FAQ</p>
+    </div>
+</div>
+<div class="col-3 col-md-3">
+    <div class="footer-text">
+        <h4>Resources</h4>
+        <p>About us</p>
+        <p>Our Offerings</p>
+        <p>Contact Us</p>
+    </div>
+</footer>
+</div>
+
+
+{% endblock content %}
