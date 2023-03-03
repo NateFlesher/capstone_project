@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.profile-info, .job-history, .delete-account {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info button {
+  margin-top: 1rem;
+}
+
+.job-history ul {
+  margin-left: 1rem;
+}
+
+.delete-account form {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -16,8 +16,8 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-#app.config['GOOGLEMAPS_API_KEY'] = 'AIzaSyBNEdOgzcT9aJ7k_9LMunzeSYe8DPkZkjY'
-#GoogleMaps(app)
+app.config['GOOGLEMAPS_API_KEY'] = 'AIzaSyCe0xfgGSVjP3RqECyZ_cR7M7C7pEzUz1s'
+GoogleMaps(app)
 app.register_blueprint(site)
 app.register_blueprint(auth)
 app.register_blueprint(api)

@@ -19,13 +19,16 @@ def signup():
             user = User(email, password, is_muver)
             db.session.add(user)
             db.session.commit()
-
             logged_user = User.query.filter(User.email == email).first()
             if logged_user and check_password_hash(logged_user.password, password):
                 login_user(logged_user)
-            
-            flash("You have successfully logged in", 'auth-success')
-            return redirect(url_for('site.profile'))
+                if logged_user.is_muver:
+                    flash("Please complete your muver profile", 'auth-success')
+                    return redirect(url_for('site.muver_profile'))
+                else:
+                    flash("You have successfully logged in", 'auth-success')
+                    return redirect(url_for('site.profile'))
+
 
             #flash("You have successfully create a user account")
 

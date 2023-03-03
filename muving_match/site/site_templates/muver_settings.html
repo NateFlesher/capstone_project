@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Settings</h1>
+<h2>Muver Profile Information</h2>
+<ul>
+    <li>First Name: {{ muver_profile.first_name }}</li>
+    <li>Last Name: {{ muver_profile.last_name }}</li>
+    <li>Current Address: {{ muver_profile.current_address }}</li>
+    <li>City: {{ muver_profile.city }}</li>
+    <li>State: {{ muver_profile.state }}</li>
+    <li>Zip Code: {{ muver_profile.zip_code }}</li>
+    <li>Phone Number: {{ muver_profile.phone_number }}</li>
+</ul>
+
+
+<a href="{{ url_for('site.edit_muver_profile') }}"><button>Edit Profile Settings</button></a>
+
+
+<form method="POST" action="{{ url_for('site.delete_account') }}">
+    <button type="submit" class="btn btn-danger">Delete Account</button>
+</form>
+{% endblock %}

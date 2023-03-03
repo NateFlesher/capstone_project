@@ -1,0 +1,34 @@
+<form method = 'POST'>
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="title-field">
+        {{ form.title.label }}
+        {{ form.title(class = 'form-control', placeholder = "Title") }}
+        </fieldset>
+        <fieldset id="description-field">
+        {{ form.description.label }}
+        {{ form.description(class = 'form-control', placeholder = "Description") }}
+        </fieldset>
+        <fieldset id="start_add-field">
+        {{ form.start_add.label }}
+        {{ form.start_add(class = 'form-control', placeholder = "Start/Loading Address") }}
+        </fieldset>
+        <fieldset id="start_housing_type-field">
+        {{ form.start_housing_type.label }}
+        {{ form.start_housing_type(class = 'form-control', placeholder = "Starting Address Housing Type") }}
+        </fieldset>
+        <fieldset id="start_floor_num-field">
+        {{ form.start_floor_num.label }}
+        {{ form.start_floor_num(class = 'form-control', placeholder = "Starting Address Floor (If Applicable)") }}
+        </fieldset>
+        <fieldset id="start_beds-field">
+        {{ form.start_beds.label }}
+        {{ form.start_beds(class = 'form-control', placeholder = "Starting Address Bedrooms") }}
+        </fieldset>
+        <fieldset id="start_baths-field">
+        {{ form.start_baths.label }}
+        {{ form.start_baths(class = 'form-control', placeholder = "Starting Address Bathrooms") }}
+
+        {{ form.submit_button(class = "btn btn-primary btn-block", onclick="location.href='/post_a_job?title=' + document.getElementById('title-field').value + '&description=' + document.getElementById('description-field').value + '&start_add=' + document.getElementById('start_add-field').value + '&start_housing_type=' + document.getElementById('start_housing_type-field').value + '&start_floor_num=' + document.getElementById('start_floor_num-field').value + '&start_beds=' + document.getElementById('start_beds-field').value") }}
+    </div>
+</form>

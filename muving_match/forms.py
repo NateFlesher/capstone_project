@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField, DateField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField, DateField, TextAreaField
 from wtforms.validators import DataRequired, Email, Length, NumberRange
 
 
@@ -27,9 +27,19 @@ class UpdateProfileForm(FlaskForm):
     phone_number = StringField('Phone Number', validators=[DataRequired(), Length(max=12)])
     submit_button = SubmitField()
 
+class PostJobIntroForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired()])
+    start_add = StringField('Start/Loading Address', validators=[DataRequired()])
+    start_housing_type = StringField('Starting Address Housing Type', validators=[DataRequired()])
+    start_floor_num = IntegerField('Starting Address Floor (If Applicable)')
+    start_beds = IntegerField('Starting Address Bedrooms', validators=[DataRequired()])
+    start_baths = IntegerField('Starting Address Bathrooms', validators=[DataRequired()])
+    submit_button = SubmitField()
+
 class PostAJobForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired(), Length(max=100)])
-    description = StringField('Description', validators=[DataRequired(), Length(max=500)])
+    description = TextAreaField('Description', validators=[DataRequired(), Length(max=500)])
     start_add = StringField('Starting/Loading Address', validators=[DataRequired(), Length(max=100)])
     start_housing_type = StringField('Starting House Type', validators=[DataRequired(), Length(max=100)])
     start_floor_num = IntegerField('Starting Floor Number')

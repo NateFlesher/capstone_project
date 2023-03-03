@@ -1,17 +1,62 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../../static/css/settings.css">
+<title>Title</title>
+</head>
+<body>
+    {% extends 'base.html' %}
 
-{% block content %}
-<h1>Settings</h1>
-<h2>Profile Information</h2>
-<ul>
-    <li>First Name: {{ customer_profile.first_name }}</li>
-    <li>Last Name: {{ customer_profile.last_name }}</li>
-    <li>Current Address: {{ customer_profile.current_address }}</li>
-    <li>City: {{ customer_profile.city }}</li>
-    <li>State: {{ customer_profile.state }}</li>
-    <li>Zip Code: {{ customer_profile.zip_code }}</li>
-    <li>Phone Number: {{ customer_profile.phone_number }}</li>
-</ul>
+    {% block content %}
+      <h1>Settings</h1>
+      
+      <div class="profile-info">
+        <h2>Profile Information</h2>
+        <ul>
+          <li>First Name: {{ customer_profile.first_name }}</li>
+          <li>Last Name: {{ customer_profile.last_name }}</li>
+          <li>Current Address: {{ customer_profile.current_address }}</li>
+          <li>City: {{ customer_profile.city }}</li>
+          <li>State: {{ customer_profile.state }}</li>
+          <li>Zip Code: {{ customer_profile.zip_code }}</li>
+          <li>Phone Number: {{ customer_profile.phone_number }}</li>
+        </ul>
+        <a href="{{ url_for('site.edit_profile') }}"><button>Edit Profile Settings</button></a>
+      </div>
+    
+      <div class="job-history">
+        <h2>Job History</h2>
+        {% if job_history %}
+          <ul>
+            {% for job in job_history %}
+              <li>{{ job.title }} - {{ job.description }} {{ job.start_add }} - {{ job.start_housing_type }}
+                <form method="POST" action="{{ url_for('site.delete_job', job_id=job.job_id) }}">
+                  <button type="submit" class="btn btn-danger">Delete Job</button>
+                </form>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No job history found.</p>
+        {% endif %}
+      </div>
+    
+      <div class="delete-account">
+        <h2>Delete Account</h2>
+        <form method="POST" action="{{ url_for('site.delete_account') }}">
+          <button type="submit" class="btn btn-danger">Delete Account</button>
+        </form>
+      </div>
+    
+    {% endblock %}
 
-<a href="{{ url_for('site.edit_profile') }}"><button>Edit Profile Settings</button></a>
-{% endblock %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

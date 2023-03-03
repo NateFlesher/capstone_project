@@ -1,16 +1,40 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../../static/css/sign_in.css">
+<title>Title</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
 
 {% block content %}
 
-<h1>Sign in</h1>
-<main class="container">
-    <div class="row">
-        <aside class="col-12">
-            <h2>Welcome Back! Please Sign in Here</h2>
-            {% include 'signin_form.html' %}
-        </aside>
+<div class="background-image">
+  <div class="signin-form-wrapper">
+    <h1>Sign in</h1>
+    <div class="signin-form-container">
+      <aside>
+        <h2>Welcome Back! Please Sign in Here</h2>
+        {% include 'signin_form.html' %}
+        <p>Don't have an account? <a href="{{ url_for('auth.signup') }}">Sign up</a> here!</p>
+      </aside>
     </div>
-</main>
+  </div>
+</div>
 
 {% endblock content %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
 

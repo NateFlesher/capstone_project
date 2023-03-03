@@ -1,0 +1,17 @@
+<form method = 'POST'>
+    {{ form.hidden_tag() }}
+    <!--Job Bidding Form-->
+   <form class="job-bid-form">
+  <h2 class="job-bid-form__heading">Place a Bid on a Job</h2>
+  <h3 class="job-bid-form__subheading">Select a job from the list above and enter your bid amount below:</h3>
+  <label class="job-bid-form__label" for="job-select">Select Job:</label>
+  <select class="job-bid-form__select" id="job-select" name="job-select">
+    {% for job in muver_jobs %}
+    <option value="{{ job.id }}">{{ job.title }} - {{ job.start_add }}</option>
+    {% endfor %}
+  </select>
+  <label class="job-bid-form__label" for="bid-amount">Bid Amount:</label>
+  <input class="job-bid-form__input" type="text" id="bid-amount" name="bid-amount">
+  <button class="job-bid-form__button" type="submit">Place Bid</button>
+</form>
+</form>

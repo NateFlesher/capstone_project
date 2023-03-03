@@ -1,0 +1,36 @@
+.background-image {
+  background-image: url('../images/sign_in_image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image-signup {
+  background-image: url('../images/sign_up_image.jpg');
+  background-size: cover;
+  background-position: center bottom -750px; /* move image up */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 800px;
+}
+
+.signin-form-container {
+  margin-top: 50px;
+}
+
+.signin-form-container aside h2 {
+  margin-top: 0;
+}
