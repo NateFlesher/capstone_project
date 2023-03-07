@@ -1,62 +1,82 @@
-<form method = 'POST'>
-    {{ form.hidden_tag() }}
-    <div class="form-group">
-        <fieldset id="title-field">
-        {{ form.title.label }}
-        {{ form.title(class = 'form-control', placeholder = "Title") }}
-        </fieldset>
-        <fieldset id="description-field">
-        {{ form.description.label }}
-        {{ form.description(class = 'form-control', placeholder = "Description") }}
-        </fieldset>
-        <fieldset id="start_add-field">
-        {{ form.start_add.label }}
-        {{ form.start_add(class = 'form-control', placeholder = "Start/Loading Address") }}
-        </fieldset>
-        <fieldset id="start_housing_type-field">
-        {{ form.start_housing_type.label }}
-        {{ form.start_housing_type(class = 'form-control', placeholder = "Starting Address Housing Type") }}
-        </fieldset>
-        <fieldset id="start_floor_num-field">
-        {{ form.start_floor_num.label }}
-        {{ form.start_floor_num(class = 'form-control', placeholder = "Starting Address Floor (If Applicable)") }}
-        </fieldset>
-        <fieldset id="start_beds-field">
-        {{ form.start_beds.label }}
-        {{ form.start_beds(class = 'form-control', placeholder = "Starting Address Bedrooms") }}
-        </fieldset>
-        <fieldset id="start_baths-field">
-        {{ form.start_baths.label }}
-        {{ form.start_baths(class = 'form-control', placeholder = "Starting Address Bathrooms") }}
-        <fieldset id="end_add-field">
-        {{ form.end_add.label }}
-        {{ form.end_add(class = 'form-control', placeholder = "End/Unloading Address") }}
-        </fieldset>
-        <fieldset id="end_housing_type-field">
-        {{ form.end_housing_type.label }}
-        {{ form.end_housing_type(class = 'form-control', placeholder = "Ending Address Housing Type") }}
-        </fieldset>
-        <fieldset id="end_floor_num-field">
-        {{ form.end_floor_num.label }}
-        {{ form.end_floor_num(class = 'form-control', placeholder = "Ending Address Floor (If Applicable)") }}
-        </fieldset>
-        <fieldset id="end_beds-field">
-        {{ form.end_beds.label }}
-        {{ form.end_beds(class = 'form-control', placeholder = "Ending Address Bedrooms") }}
-        </fieldset>
-        <fieldset id="end_baths-field">
-        {{ form.end_baths.label }}
-        {{ form.end_baths(class = 'form-control', placeholder = "Ending Address Bathrooms") }}
-        </fieldset>
-        <fieldset id="extra_add-field">
-            {{ form.extra_add.label }}
-            {{ form.extra_add(class = 'form-control', placeholder = "Additional Stops") }}
-            </fieldset>
-        <fieldset id="moving_date-field">
-            {{ form.moving_date.label }}
-            {{ form.moving_date(class = 'form-control', placeholder = "Estimated Moving Date") }}
-            </fieldset>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../static/css/post_a_job.css">
+<title>Title</title>
+</head>
+<body>
 
-        {{ form.submit_button(class = "btn btn-primary btn-block") }}
-    </div>
-</form>
+    <form method = 'POST'>
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <fieldset id="title-field">
+            {{ form.title.label }}
+            {{ form.title(class = 'form-control', placeholder = "Title") }}
+            </fieldset>
+            <fieldset id="description-field">
+            {{ form.description.label }}
+            {{ form.description(class = 'form-control', placeholder = "Description") }}
+            </fieldset>
+            <fieldset id="start_add-field">
+            {{ form.start_add.label }}
+            {{ form.start_add(class = 'form-control', placeholder = "Start/Loading Address") }}
+            </fieldset>
+            <fieldset id="start_housing_type-field">
+            {{ form.start_housing_type.label }}
+            {{ form.start_housing_type(class = 'form-control', placeholder = "Starting Address Housing Type") }}
+            </fieldset>
+            <fieldset id="start_floor_num-field">
+            {{ form.start_floor_num.label }}
+            {{ form.start_floor_num(class = 'form-control', placeholder = "Starting Address Floor (If Applicable)") }}
+            </fieldset>
+            <fieldset id="start_beds-field">
+            {{ form.start_beds.label }}
+            {{ form.start_beds(class = 'form-control', placeholder = "Starting Address Bedrooms") }}
+            </fieldset>
+            <fieldset id="start_baths-field">
+            {{ form.start_baths.label }}
+            {{ form.start_baths(class = 'form-control', placeholder = "Starting Address Bathrooms") }}
+            <fieldset id="end_add-field">
+            {{ form.end_add.label }}
+            {{ form.end_add(class = 'form-control', placeholder = "End/Unloading Address") }}
+            </fieldset>
+            <fieldset id="end_housing_type-field">
+            {{ form.end_housing_type.label }}
+            {{ form.end_housing_type(class = 'form-control', placeholder = "Ending Address Housing Type") }}
+            </fieldset>
+            <fieldset id="end_floor_num-field">
+            {{ form.end_floor_num.label }}
+            {{ form.end_floor_num(class = 'form-control', placeholder = "Ending Address Floor (If Applicable)") }}
+            </fieldset>
+            <fieldset id="end_beds-field">
+            {{ form.end_beds.label }}
+            {{ form.end_beds(class = 'form-control', placeholder = "Ending Address Bedrooms") }}
+            </fieldset>
+            <fieldset id="end_baths-field">
+            {{ form.end_baths.label }}
+            {{ form.end_baths(class = 'form-control', placeholder = "Ending Address Bathrooms") }}
+            </fieldset>
+            <fieldset id="extra_add-field">
+                {{ form.extra_add.label }}
+                {{ form.extra_add(class = 'form-control', placeholder = "Additional Stops") }}
+                </fieldset>
+            <fieldset id="moving_date-field">
+                {{ form.moving_date.label }}
+                {{ form.moving_date(class = 'form-control', placeholder = "Estimated Moving Date") }}
+                </fieldset>
+    
+            {{ form.submit_button(class = "btn btn-primary btn-block") }}
+        </div>
+    </form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
